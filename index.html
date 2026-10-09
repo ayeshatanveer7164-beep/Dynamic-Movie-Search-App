@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo">Cine<span>Search</span></a>
+            <span class="nav-label">MOVIE DISCOVERY</span>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">YOUR NEXT FAVORITE FILM</p>
+            <h1>Discover Movies.<br><span>Explore Stories.</span></h1>
+            <p class="subtitle">
+                Search movies, explore their ratings, and discover
+                your next cinematic adventure.
+            </p>
+
+            <form id="searchForm" class="search-form">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search movies, e.g. Interstellar..."
+                    aria-label="Movie title"
+                    required
+                >
+                <button type="submit" id="searchButton">Search</button>
+            </form>
+
+            <p class="search-hint">
+                Try searching for Inception, Avatar, or Batman
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">EXPLORE THE COLLECTION</p>
+                <h2 id="resultsHeading">Find Your Movie</h2>
+            </div>
+            <span id="resultCount" class="result-count"></span>
+        </div>
+
+        <div id="statusMessage" class="status-message" role="status">
+            Enter a movie title above to get started.
+        </div>
+
+        <div id="movieContainer" class="movie-grid"></div>
+    </main>
+
+    <footer>
+        <p>Movie data provided by OMDb API.</p>
+        <p>Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <!-- Movie details popup -->
+    <dialog id="movieDialog" class="movie-dialog">
+        <button
+            id="closeDialog"
+            class="close-button"
+            aria-label="Close movie details"
+        >&times;</button>
+        <div id="movieDetails"></div>
+    </dialog>
+
+</body>
+</html>
